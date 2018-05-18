@@ -59,12 +59,10 @@ public class Main {
 
         List<CustomerRecord> recordsByStreak = new ArrayList<>(results.values());
 
-        Collections.sort(recordsByStreak, new Comparator<CustomerRecord>() {
-            @Override
-            public int compare(CustomerRecord o1, CustomerRecord o2) {
-                return o1.currentStreak - o2.currentStreak;
-            }
-        });
+        Comparator<CustomerRecord> sortByStreak = (p, o) -> p.currentStreak;
+        Comparator<CustomerRecord> sortByAccount = (p, o) -> p.account.compareToIgnoreCase(o.account);
+
+        recordsByStreak.stream().sorted(sortByStreak.thenComparing(sortByAccount));
 
         return recordsByStreak.get(0);
     }
