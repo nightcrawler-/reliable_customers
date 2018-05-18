@@ -12,7 +12,6 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException, ParseException {
-        // write your code here
 
         List<CustomerRecord> results = getBestCustomers(args[0], Integer.parseInt(args[1]));
 
@@ -21,20 +20,26 @@ public class Main {
         }
     }
 
-
+    /**
+     * @param filepath
+     * @param max      - the number of good customers to return
+     * @return
+     * @throws FileNotFoundException
+     * @throws ParseException
+     */
     public static List<CustomerRecord> getBestCustomers(String filepath, int max) throws FileNotFoundException, ParseException {
         //read file
-        //skip first line as is titles
+        //skip first line -- is titles
         //next lines as string
         //establish sub strings by splitting at commas
         //transaction amount irrelevant
         //parse date
-        //work magic
-        //ordered list, start with date, establish trend
-        //content already sorted by date
-        //algo to count consecutive occurances of account number*
-        //even though sorted by date, assumptions for consecutive days will fail
-        //check if next date is consecutive
+
+        //create list sorted by date
+        //loop through list and determine if for each customer record, the previous payment falls a day back, if true, increment streak
+        //convert resulting hashmap to list (un-ordered)
+        //sort list by streak then by account name
+        //split list at n
 
         Scanner scanner = new Scanner(new File(filepath));
         scanner.nextLine();
@@ -50,14 +55,21 @@ public class Main {
 
             if (current == null) {
                 customerRecord.currentStreak++;
+                customerRecord.streaks.add(1);
                 results.put(customerRecord.account, customerRecord);
             } else {
                 //compare date difference
                 //decide increment or not
                 customerRecord.currentStreak = current.currentStreak;
+                customerRecord.streaks = current.streaks;
 
                 if (customerRecord.date.get(Calendar.DAY_OF_YEAR) - current.date.get(Calendar.DAY_OF_YEAR) == 1) {
                     customerRecord.currentStreak++;
+                    customerRecord.streaks.set(customerRecord.streaks.size() - 1, customerRecord.streaks.get(customerRecord.streaks.size() - 1) + 1);
+                    //means streak is still on, add to**
+                }else{
+                    //means streak was broken, create new empty streak
+                    customerRecord.streaks.add(1);
                 }
                 results.put(customerRecord.account, customerRecord);
 
@@ -70,14 +82,14 @@ public class Main {
         recordsByStreak.sort(new Comparator<CustomerRecord>() {
             @Override
             public int compare(CustomerRecord o1, CustomerRecord o2) {
-                if (o1.currentStreak < o2.currentStreak) {
+                if (o2.getLongestStreak() > o1.getLongestStreak()) {
                     return 1;
-                } else if (o1.currentStreak > o2.currentStreak) {
+                } else if (o2.getLongestStreak() < o1.getLongestStreak()) {
                     return -1;
                 } else {
+                    //instead of returning 0 when equal, further sort by name
                     return o1.account.compareToIgnoreCase(o2.account);
                 }
-                //instead of returning 0 when equal, further sort by name
 
             }
         });
@@ -89,6 +101,13 @@ public class Main {
         return recordsByStreak.subList(0, max);
     }
 
+    /**
+     * Return valid objects from csv file
+     *
+     * @param scanner
+     * @return
+     * @throws ParseException
+     */
     private static ArrayList<CustomerRecord> parseRecords(Scanner scanner) throws ParseException {
         ArrayList<CustomerRecord> customerRecords = new ArrayList<>();
 
@@ -96,7 +115,6 @@ public class Main {
             String[] data = scanner.nextLine().split(",");
             customerRecords.add(new CustomerRecord(data[0], parseDate(data[2]), 0));
         }
-
         customerRecords.sort(new Comparator<CustomerRecord>() {
             @Override
             public int compare(CustomerRecord o1, CustomerRecord o2) {
@@ -107,6 +125,13 @@ public class Main {
         return customerRecords;
     }
 
+    /**
+     * Converts date strings (fixed format) to Calendar object
+     *
+     * @param date
+     * @return
+     * @throws ParseException
+     */
     public static Calendar parseDate(String date) throws ParseException {
         //2017-01-02 00:00:00
         String pattern = "yyy-MM-dd HH:mm:ss";
@@ -116,15 +141,32 @@ public class Main {
         return cal;
     }
 
+    /**
+     * S
+     */
     static class CustomerRecord {
         public String account;
         public Calendar date;
         public int currentStreak;
 
+        //should keep a list of streaks, and have an accessor for longest streak
+        public List<Integer> streaks = new ArrayList<>();
+
         public CustomerRecord(String account, Calendar date, int currentStreak) {
             this.account = account;
             this.date = date;
             this.currentStreak = currentStreak;
+        }
+
+        public int getLongestStreak() {
+            streaks.sort(new Comparator<Integer>() {
+                @Override
+                public int compare(Integer o1, Integer o2) {
+                    return o2.compareTo(o1);
+                }
+            });
+
+            return streaks.get(0);
         }
 
         @Override
@@ -133,6 +175,7 @@ public class Main {
                     "account='" + account + '\'' +
                     ", date=" + date.getTime() +
                     ", currentStreak=" + currentStreak +
+                    ", streaks=" + getLongestStreak() +
                     '}';
         }
     }

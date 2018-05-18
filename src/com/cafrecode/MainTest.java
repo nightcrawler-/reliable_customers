@@ -16,13 +16,13 @@ class MainTest {
 
     @Test
     void getBestCustomers() throws FileNotFoundException, ParseException {
-       // assertEquals(1, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 1).size());
-       // assertEquals("ACC1", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 1).get(0).account);
+        assertEquals(1, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 1).size());
+        assertEquals("ACC2", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 1).get(0).account);
 
-       // assertEquals(2, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 2).size());
-        //assertEquals("ACC1", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 1).get(0).account);
+        assertEquals(2, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 2).size());
+        assertEquals("ACC1", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 1).get(0).account);
 
-        //assertEquals(3, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).size());
+        assertEquals(3, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).size());
         assertEquals("ACC143", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).get(0).account);
 
 
