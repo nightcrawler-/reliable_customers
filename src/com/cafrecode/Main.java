@@ -16,7 +16,7 @@ public class Main {
     }
 
 
-    public static CustomerRecord getBestCustomers(String filepath, int max) throws FileNotFoundException, ParseException {
+    public static List<CustomerRecord> getBestCustomers(String filepath, int max) throws FileNotFoundException, ParseException {
         //read file
         //skip first line as is titles
         //next lines as string
@@ -64,7 +64,7 @@ public class Main {
 
         recordsByStreak.stream().sorted(sortByStreak.thenComparing(sortByAccount));
 
-        return recordsByStreak.get(0);
+        return recordsByStreak.subList(0, max);
     }
 
     private static ArrayList<CustomerRecord> parseRecords(Scanner scanner) throws ParseException {
