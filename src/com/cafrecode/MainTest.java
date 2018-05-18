@@ -20,11 +20,13 @@ class MainTest {
         assertEquals("ACC2", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 1).get(0).account);
 
         assertEquals(2, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 2).size());
-        assertEquals("ACC1", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 1).get(0).account);
+        assertEquals("ACC1", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 2).get(0).account);
+        assertEquals("ACC2", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_2.csv", 2).get(1).account);
 
         assertEquals(3, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).size());
         assertEquals("ACC143", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).get(0).account);
-
+        assertEquals("ACC214", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).get(1).account);
+        assertEquals("ACC394", Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_3.csv", 3).get(2).account);
 
     }
 

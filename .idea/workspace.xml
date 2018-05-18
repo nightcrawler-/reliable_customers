@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0327022-40d0-4921-91dd-dd0619bf28a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/cafrecode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafrecode/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafrecode/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="246">
@@ -31,10 +30,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cafrecode/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="82">
               <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" />
         <option value="$PROJECT_DIR$/src/com/cafrecode/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" />
       </list>
     </option>
   </component>
@@ -216,24 +215,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 42m 11s.xml">
-      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 42m 56s.xml">
-      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 45m 20s.xml">
-      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 47m 08s.xml">
-      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 48m 52s.xml">
-      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 52m 17s.xml">
-      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 55m 11s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
@@ -244,6 +225,24 @@
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 17h 59m 25s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 18h 17m 41s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 18h 19m 26s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 18h 20m 54s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 18h 21m 41s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 18h 22m 59s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 18h 25m 30s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -259,7 +258,7 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3990307" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5815832" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.39418417" />
       <window_info id="Capture Tool" />
@@ -283,16 +282,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/cafrecode/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafrecode/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -303,6 +292,16 @@
             <element signature="e#3418#3419#0" expanded="true" />
             <element signature="e#5710#5711#0" expanded="true" />
             <element signature="e#5758#5759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cafrecode/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
