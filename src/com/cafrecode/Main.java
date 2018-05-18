@@ -35,8 +35,9 @@ public class Main {
         //transaction amount irrelevant
         //parse date
 
-        //create list sorted by date
+        //create list sorted by date (assumption of ordered list fails)
         //loop through list and determine if for each customer record, the previous payment falls a day back, if true, increment streak
+        //multiple streaks per customer, resort to the largest for comparison
         //convert resulting hashmap to list (un-ordered)
         //sort list by streak then by account name
         //split list at n
@@ -54,17 +55,14 @@ public class Main {
             CustomerRecord current = results.get(customerRecord.account);
 
             if (current == null) {
-                customerRecord.currentStreak++;
                 customerRecord.streaks.add(1);
                 results.put(customerRecord.account, customerRecord);
             } else {
                 //compare date difference
                 //decide increment or not
-                customerRecord.currentStreak = current.currentStreak;
                 customerRecord.streaks = current.streaks;
 
                 if (customerRecord.date.get(Calendar.DAY_OF_YEAR) - current.date.get(Calendar.DAY_OF_YEAR) == 1) {
-                    customerRecord.currentStreak++;
                     customerRecord.streaks.set(customerRecord.streaks.size() - 1, customerRecord.streaks.get(customerRecord.streaks.size() - 1) + 1);
                     //means streak is still on, add to**
                 }else{
@@ -113,7 +111,7 @@ public class Main {
 
         while (scanner.hasNext()) {
             String[] data = scanner.nextLine().split(",");
-            customerRecords.add(new CustomerRecord(data[0], parseDate(data[2]), 0));
+            customerRecords.add(new CustomerRecord(data[0], parseDate(data[2])));
         }
         customerRecords.sort(new Comparator<CustomerRecord>() {
             @Override
@@ -147,15 +145,13 @@ public class Main {
     static class CustomerRecord {
         public String account;
         public Calendar date;
-        public int currentStreak;
 
         //should keep a list of streaks, and have an accessor for longest streak
         public List<Integer> streaks = new ArrayList<>();
 
-        public CustomerRecord(String account, Calendar date, int currentStreak) {
+        public CustomerRecord(String account, Calendar date) {
             this.account = account;
             this.date = date;
-            this.currentStreak = currentStreak;
         }
 
         public int getLongestStreak() {
@@ -174,7 +170,6 @@ public class Main {
             return "CustomerRecord{" +
                     "account='" + account + '\'' +
                     ", date=" + date.getTime() +
-                    ", currentStreak=" + currentStreak +
                     ", streaks=" + getLongestStreak() +
                     '}';
         }
