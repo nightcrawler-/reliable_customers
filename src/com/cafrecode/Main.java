@@ -16,7 +16,7 @@ public class Main {
     }
 
 
-    public static HashMap<String, CustomerRecord> getBestCustomers(String filepath, int max) throws FileNotFoundException, ParseException {
+    public static CustomerRecord getBestCustomers(String filepath, int max) throws FileNotFoundException, ParseException {
         //read file
         //skip first line as is titles
         //next lines as string
@@ -57,7 +57,16 @@ public class Main {
 
         }
 
-        return results;
+        List<CustomerRecord> recordsByStreak = new ArrayList<>(results.values());
+
+        Collections.sort(recordsByStreak, new Comparator<CustomerRecord>() {
+            @Override
+            public int compare(CustomerRecord o1, CustomerRecord o2) {
+                return o1.currentStreak - o2.currentStreak;
+            }
+        });
+
+        return recordsByStreak.get(0);
     }
 
     private static ArrayList<CustomerRecord> parseRecords(Scanner scanner) throws ParseException {

@@ -15,7 +15,7 @@ class MainTest {
 
     @Test
     void getBestCustomers() throws FileNotFoundException, ParseException {
-        assertEquals(0, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 0).get("ACC1").currentStreak);
+        assertEquals(0, Main.getBestCustomers("/home/frederick/Desktop/dev/lendable/Lendable Coding Assessment - Reliable Customers/transaction_data_1.csv", 0).account);
     }
 
     @Test

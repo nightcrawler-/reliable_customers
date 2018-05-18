@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0327022-40d0-4921-91dd-dd0619bf28a0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliable_customers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/reliable_customers.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cafrecode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafrecode/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,10 +17,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cafrecode/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+            <state relative-caret-position="357">
+              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+                <element signature="e#2291#2292#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,6 +224,9 @@
     <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 26m 32s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 28m 10s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
@@ -239,9 +240,9 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32956383" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32956383" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.035541195" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -275,10 +276,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafrecode/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+        <state relative-caret-position="357">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
           </folding>
         </state>
       </provider>
