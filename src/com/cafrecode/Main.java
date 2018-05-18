@@ -11,8 +11,14 @@ import java.util.*;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, ParseException {
         // write your code here
+
+        List<CustomerRecord> results = getBestCustomers(args[0], Integer.parseInt(args[1]));
+
+        for (CustomerRecord result : results) {
+            System.out.print(result.account + ", ");
+        }
     }
 
 
@@ -48,21 +54,37 @@ public class Main {
             } else {
                 //compare date difference
                 //decide increment or not
+                customerRecord.currentStreak = current.currentStreak;
+
                 if (customerRecord.date.get(Calendar.DAY_OF_YEAR) - current.date.get(Calendar.DAY_OF_YEAR) == 1) {
-                    customerRecord.currentStreak = current.currentStreak;
                     customerRecord.currentStreak++;
-                    results.put(customerRecord.account, customerRecord);
                 }
+                results.put(customerRecord.account, customerRecord);
+
             }
 
         }
 
         List<CustomerRecord> recordsByStreak = new ArrayList<>(results.values());
 
-        Comparator<CustomerRecord> sortByStreak = (p, o) -> p.currentStreak;
-        Comparator<CustomerRecord> sortByAccount = (p, o) -> p.account.compareToIgnoreCase(o.account);
+        recordsByStreak.sort(new Comparator<CustomerRecord>() {
+            @Override
+            public int compare(CustomerRecord o1, CustomerRecord o2) {
+                if (o1.currentStreak < o2.currentStreak) {
+                    return 1;
+                } else if (o1.currentStreak > o2.currentStreak) {
+                    return -1;
+                } else {
+                    return o1.account.compareToIgnoreCase(o2.account);
+                }
+                //instead of returning 0 when equal, further sort by name
 
-        recordsByStreak.stream().sorted(sortByStreak.thenComparing(sortByAccount));
+            }
+        });
+
+        for (CustomerRecord customerRecord : recordsByStreak) {
+            System.out.println(customerRecord.toString());
+        }
 
         return recordsByStreak.subList(0, max);
     }
@@ -74,6 +96,14 @@ public class Main {
             String[] data = scanner.nextLine().split(",");
             customerRecords.add(new CustomerRecord(data[0], parseDate(data[2]), 0));
         }
+
+        customerRecords.sort(new Comparator<CustomerRecord>() {
+            @Override
+            public int compare(CustomerRecord o1, CustomerRecord o2) {
+                return o1.date.compareTo(o2.date);
+            }
+        });
+
         return customerRecords;
     }
 
@@ -95,6 +125,15 @@ public class Main {
             this.account = account;
             this.date = date;
             this.currentStreak = currentStreak;
+        }
+
+        @Override
+        public String toString() {
+            return "CustomerRecord{" +
+                    "account='" + account + '\'' +
+                    ", date=" + date.getTime() +
+                    ", currentStreak=" + currentStreak +
+                    '}';
         }
     }
 

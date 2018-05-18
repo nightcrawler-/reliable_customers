@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0327022-40d0-4921-91dd-dd0619bf28a0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/reliable_customers/com/cafrecode/Main$CustomerRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/reliable_customers/com/cafrecode/Main$CustomerRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/reliable_customers/com/cafrecode/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/reliable_customers/com/cafrecode/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/reliable_customers/com/cafrecode/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/reliable_customers/com/cafrecode/MainTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/cafrecode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafrecode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cafrecode/MainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +22,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cafrecode/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="121">
+              <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3378#3379#0" expanded="true" />
+                <element signature="e#3418#3419#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -29,8 +36,8 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cafrecode/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="167" selection-start-line="17" selection-start-column="167" selection-end-line="17" selection-end-column="167" />
+            <state relative-caret-position="110">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,6 +199,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MainTest.getBestCustomers" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest.parseDate" />
       </list>
     </recent_temporary>
@@ -210,25 +218,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest_parseDate - 2018.05.18 at 14h 50m 13s.xml">
-      <configuration name="MainTest.parseDate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_parseDate - 2018.05.18 at 14h 51m 36s.xml">
-      <configuration name="MainTest.parseDate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 23m 00s.xml">
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 44m 14s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 24m 58s.xml">
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 45m 26s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 26m 32s.xml">
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 47m 02s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 28m 10s.xml">
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 47m 43s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 15h 34m 47s.xml">
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 48m 13s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 52m 22s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 53m 02s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 54m 49s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 58m 00s.xml">
+      <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBestCustomers - 2018.05.18 at 16h 58m 52s.xml">
       <configuration name="MainTest.getBestCustomers" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -238,13 +255,13 @@
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32956383" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32956383" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32956383" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45234248" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.39418417" />
       <window_info id="Capture Tool" />
@@ -270,8 +287,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/cafrecode/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="167" selection-start-line="17" selection-start-column="167" selection-end-line="17" selection-end-column="167" />
+        <state relative-caret-position="110">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -280,10 +297,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cafrecode/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="121">
+          <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3378#3379#0" expanded="true" />
+            <element signature="e#3418#3419#0" expanded="true" />
           </folding>
         </state>
       </provider>
